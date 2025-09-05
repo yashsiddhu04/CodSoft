@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Yash Siddhu Landing Page</title>
+   
+    <style>
+        body{
+            height:100vh;
+        }
+     body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left:0; right:0; top:0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("your-image.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #7a6868;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #582f2f;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 0px;
+  position: fixed;
+  left:0; right:0; bottom:0;
+}
+
+
+ body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #fff;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .box {
+    border-radius: 15px;
+  }
+
+  .blue { background: #4070d6; }
+  .yellow { background: #f6d74f; }
+  .green { background: #4fc4aa; }
+  .red { background: #e54949; }
+  .pink { background: #e970a1; }
+
+  /* Positioning according to the reference image */
+  .blue { grid-column: 1 / 3; grid-row: 1 / 2; }
+  .yellow:first-of-type { grid-column: 3 / 4; grid-row: 1 / 2; }
+  .green:first-of-type { grid-column: 4 / 5; grid-row: 1 / 2; }
+  .red:first-of-type { grid-column: 5 / 6; grid-row: 1 / 2; } /* not used in this example */
+
+  .green:nth-of-type(2) { grid-column: 1 / 2; grid-row: 2 / 3; }
+  .pink { grid-column: 2 / 4; grid-row: 2 / 4; }
+  .red:nth-of-type(2) { grid-column: 4 / 5; grid-row: 2 / 3; }
+  .yellow:nth-of-type(2) { grid-column: 1 / 2; grid-row: 3 / 4; }
+  .green:nth-of-type(3) { grid-column: 4 / 5; grid-row: 3 / 4; }
+  .red:nth-of-type(3) { grid-column: 5 / 6; grid-row: 3 / 4; } /* not used in this example */
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <header>
+      <h1>CodSoft Internship</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="grid">
+  <div class="box blue"></div>
+  <div class="box yellow"></div>
+  <div class="box green"></div>
+  <div class="box red"></div>
+  <div class="box green"></div>
+  <div class="box pink"></div>
+  <div class="box red"></div>
+  <div class="box yellow"></div>
+  <div class="box green"></div>
+  <div class="box red"></div>
+</div>
+
+
+    <section class="hero">
+      <h2>Welcome to our Awesome Product</h2>
+      <p>Discover the amazing features that will revolutionize your life!</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Your Company. All rights reserved.<br />
+        Owner :- Yash Siddhu <br />
+        Web Development Internship (Level 1:- Task 2)
+      </p>
+    </footer>
+  </body>
+</html>
