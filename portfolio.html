@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Sidhu - Portfolio</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        /* --- General Styling --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e3034;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            /* margin-left: 20px;
+            margin-right: 20px; */
+            padding:0 25px;
+        }
+
+        h1, h2, h3, h4, h5, h6 ,li {
+            color: #ffffff;
+            margin: 0;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #d1d1d1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 12px 30px;
+            margin-top: 0px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: rgba(46, 48, 52, 0.8); /* Slightly transparent background */
+            backdrop-filter: blur(5px); /* Frosted glass effect */
+            padding: 25px 0;
+            position: sticky; /* Sticky header */
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between; /* Logo extreme left, nav links extreme right */
+            align-items: center;
+            padding-right:0px;
+            margin: 0px;
+            
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* padding-bottom: 20px; */
+            
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo-text p {
+            font-size: 14px;
+            color: #d1d1d1;
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin: 0;
+           padding-bottom: 20px;
+            /* padding: 0; */
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image:url("speaking.jpg") ;
+            background-repeat: no-repeat;
+            opacity: 1;
+            background-size: cover;
+            
+            /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080/2e3034/ffffff?text=Your+Background+Image') no-repeat center center/cover; */
+            
+        }
+
+        #hero .hero-content {
+            max-width: 800px;
+            margin-top: 400px;
+            color: #f31a1a;
+        }
+
+        #hero .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: #08a0ff;
+        }
+
+        #hero .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 25px;
+            color: #fffffff5;
+        }
+
+        /* --- About Section --- */
+        #about {
+            background-color: #ffffff;
+            padding: 100px 0;
+            color: #333333;
+        }
+        
+        #about .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+        
+        #about .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        #about .about-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #about .about-text {
+            flex: 2;
+        }
+
+        #about .about-text h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        #about .about-text p {
+            color: #333333;
+            opacity: 1;
+        }
+
+        /* --- Sections with Dark Background --- */
+        .dark-section {
+            background-color: #2e3034;
+            padding: 80px 0;
+        }
+
+        .dark-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #ffffff;
+        }
+
+        /* --- Skills Section --- */
+        #skills {
+            background-color: #2e3034;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .skill-item {
+            background-color: #3d4045;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .skill-item h3 {
+            font-size: 1.2rem;
+        }
+
+        /* --- Projects Section --- */
+        #projects {
+            background-color: #ffffff;
+            color: #333;
+            padding: 80px 0;
+        }
+
+        #projects h2 {
+            color: #007bff;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #000000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-card-content h3 {
+            color: #fff9f9;
+            margin-bottom: 10px;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            text-align: center;
+        }
+
+        #contact .contact-details {
+            display: flex;
+            justify-content: space-between; /* Space out contact items */
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            gap: 20px; /* Minimum space between items */
+            font-size: 1.1rem;
+            max-width:100%; /* Optional: limit width for better spacing */
+            margin: 0 auto; /* Center the contact details block */
+        }
+
+        #contact .contact-details p {
+            margin: 0px;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+        #contact .contact-details a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #contact .contact-details a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #222;
+            color: #d1d1d1;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            #hero {
+                text-align: center;
+            }
+
+            #hero .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            #about .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            #about .about-image {
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            #contact .contact-details {
+                flex-direction: column; /* Stack contact items on small screens */
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <!-- <img src="log.png" alt="CodSoft Logo"> -->
+                    <div class="logo-text">
+                        <h1>Online Portfolio</h1>
+                        <p>Just another My Blog site</p>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">WORKS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>YASH SIDDHU</h1>
+            <p>Hi, I am a Professional Developer and Web Designer. I have several years of experience in the IT Sector and I'd like to help you with...</p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-image">
+                <img src="munjiya photo.png" alt="Yash Sidhu">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>I am a developer who blends expertise with industry know-how to guide your next property development. My goal is to build amazing digital experiences.</p>
+                <p>Software developers use software development languages and tools to write, edit, maintain and test computer software. Software Developers follow the software development lifecycle (SDLC) to plan, design, build, test, and deploy software applications ranging from websites and mobile applications to web applications and video games. In addition to creating new software, Software Developers improve and maintain the working order of existing software.</p>
+                <a href="#" class="btn">DOWNLOAD RESUME</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="dark-section">
+        <div class="container">
+            <h2>SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><h3>HTML5</h3></div>
+                <div class="skill-item"><h3>CSS3</h3></div>
+                <div class="skill-item"><h3>JavaScript</h3></div>
+                <div class="skill-item"><h3>React</h3></div>
+                <div class="skill-item"><h3>Node.js</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>WORKS</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="proj_1.jpg" alt="Project 1">
+                    <div class="project-card-content">
+                        <h3>Project One</h3>
+                        <p>A web development project showcasing my skills in HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="proj_2.jpg" alt="Project 2">
+                    <div class="project-card-content">
+                        <h3>Project Two</h3>
+                        <p>A responsive website created using a mobile-first design approach.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="proj_3.jpg" alt="Project 3">
+                    <div class="project-card-content">
+                        <h3>Project Three</h3>
+                        <p>An interactive portfolio built with modern front-end frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="dark-section">
+        <div class="container">
+            <h2>CONTACT US</h2>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:yashsiddhu@email.com">yashsiddhu@email.com</a></p>
+                <p><strong>Phone:</strong> +91 9999999999</p>
+                <!-- 98765 43210 -->
+                <p><strong>LinkedIn:</strong> <a href="#">Yash Siddhu</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yash Siddhu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
